@@ -1,0 +1,24 @@
+<div class="sidebar-module sidebar-module-inset">
+        <div class="media">
+          <div class="media-left">
+              <img class="media-object" width="60px" src="{{ site.author_avatar }}" alt="anas khabali image">
+          </div>
+          <div class="media-body">
+            <h3 class="media-heading">About</h3>
+            {{site.description}}
+          </div>
+        </div>
+</div>
+
+<div class="sidebar-module">
+  <h4>Elsewhere</h4>
+  <ol class="list-unstyled">
+    <li><a href="https://fr.linkedin.com/in/{{ site.linkedin_username }}" target="_blank">Linkedin</a></li>
+    <li><a href="https://github.com/{{ site.github_username }}" target="_blank">Github</a></li>
+    <li><a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">Twitter</a></li>
+  </ol>
+</div>
+
+<div class="sidebar-module">
+  {% include archive.html %}
+</div>

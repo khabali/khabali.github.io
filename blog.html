@@ -1,0 +1,26 @@
+---
+layout: blog
+title: Blog
+permalink: /blog/
+---
+
+<div class="jumbtron">
+  <h1 class="">Bienvenu sur mon blog</h1>
+  <p class="lead">Je blog sur ma veille téchnologique, des découvertes et des projets personnels...</p>
+  <hr/>
+</div>
+
+{% for post in site.posts %}
+  <div class="blog-post">
+    <h2 class="blog-post-title">{{ post.title }}</h2>
+    <p class="blog-post-meta">{{ post.date | date: "%b %-d, %Y" }} by <a href="#">{{ post.author }}</a></p>
+    <p>
+      {{ post.excerpt }}
+    </p>
+    <div>
+      {% if post.excerpt != post.content %}
+        <a type="button" class="btn btn-info" href="{{ site.baseurl }}{{ post.url }}">Lire plus</a>
+      {% endif %}
+    </div>
+  </div>
+{% endfor %}
