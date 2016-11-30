@@ -16,11 +16,21 @@
 title: Anas tech blog
 email: anas.khabali@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I'm Anas KHABALI a software craftmanship. I'm facinated by software developement and data integration.
+  Je suis Anas KHABALI, un artisan du logiciel,
+  fasciné par les langages de programmation, les systèmes d'information et l'intégration des données.
+  Et sur ce site, je vais documenter les sujets que j'apprends, faire des résumés de ma veille technologique,
+  vous présentez mes projets personnels et d'autres choses divers et variées.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://anas-khabali.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: anas-khabali
+url: "http://khabali.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: anas_khabali
 github_username:  khabali
+linkedin_username : anaskhabali
+
+# URL of your avatar or profile pic
+author_avatar: https://avatars1.githubusercontent.com/u/1675609
+repository: https://github.com/khabali/khabali.github.io
+
+google_analytics_id : ""
 
 # Build settings
 markdown: kramdown

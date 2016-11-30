@@ -1,11 +1,13 @@
 {% include top.html %}
 
-<body class="wrap">
+<body>
+
   {% include header.html %}
+  <div class="container">
+    {{ content }}
+    {% include footer.html %}
+  </div>
 
-  {{ content }}
-
-  {% include footer.html %}
   {% include anchor_links.html %}
   {% include analytics.html %}
 
