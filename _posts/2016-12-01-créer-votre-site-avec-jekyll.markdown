@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  "Créer votre blog avec jekyll"
+title:  "Créer votre site avec jekyll"
 date:   2016-12-01 02:24:00 +0000
 author: Anas KHABALI
 categories: jekyll bloging
