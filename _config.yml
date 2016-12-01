@@ -28,7 +28,8 @@ linkedin_username : anaskhabali
 
 # URL of your avatar or profile pic
 author_avatar: https://avatars1.githubusercontent.com/u/1675609
-repository: https://github.com/khabali/khabali.github.io
+repository: khabali/khabali.github.io
+github_repo: https://github.com/khabali/khabali.github.io
 
 google_analytics_id : ""
 
