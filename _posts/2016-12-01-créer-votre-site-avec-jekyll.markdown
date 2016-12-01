@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title:  "Créer votre site avec jekyll"
 date:   2016-12-01 02:24:00 +0000
 author: Anas KHABALI
