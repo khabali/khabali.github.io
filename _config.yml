@@ -33,6 +33,9 @@ github_repo: https://github.com/khabali/khabali.github.io
 
 google_analytics_id : UA-75683653-3
 
+sass:
+    style: compressed
+
 # Build settings
 markdown: kramdown
 #theme: minima
