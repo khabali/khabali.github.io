@@ -9,7 +9,7 @@ Le blog que vous êtes en train de lire en ce moment est crée par Jekyll et hé
 
 # Jekyll 什麼.. quoi ?
 Jekyll est un framework de génération de site web statique très simple à utiliser surtout si vous êtes fan
-des [markdown](https://fr.wikipedia.org/wiki/Markdown). Car vous pouvez rédiger vos articles d'une manière très simple et très rapide. Jekyll fonctionne sans base de données et offre le minimum nécessaire pour avoir un blog très efficace. En plus le framework à plusieurs plugins dans son panier ce qui facilite la création d'un blog digne des grands.
+des [markdown](https://fr.wikipedia.org/wiki/Markdown). Car vous pouvez rédiger vos articles d'une manière très simple et très rapide. Jekyll fonctionne sans base de données et offre le minimum nécessaire pour avoir un blog très efficace. En plus le framework à plusieurs plugins dans son panier ce qui facilite la création d'un blog digne des plus grands.
 Jekyll est le moteur de génération des sites web derrière github pages. Ce qui veut dire que vous allez pouvoir héberger vos sites personnels ou les sites de vos projets gratuitement sur Github.
 
 # Comment ça marche ?
@@ -22,7 +22,7 @@ Pour les ètapes, c'est très court :
 3. C'est tout.
 
 Jekyll est vraiment très facile à installer et à comprendre. Vous allez l'adopter très rapidement pour vos sites statiques ou pour la documentation de vos projets.
-Le framework est très bien documenté vous allez trouvez tous ce qu'il vous faut sur [le site officiel de Jekyll](https://jekyllrb.com/)
+Le framework est très bien documenté, vous allez trouver tous ce qu'il vous faut sur [le site officiel de Jekyll](https://jekyllrb.com/)
 
 Une fois votre première page est perte, vous pouvez l’héberger sur n’importe quel serveur web. Vous pouvez même utiliser [githube page](https://pages.github.com/) pour publier votre blog ou site gratuitement.
 
