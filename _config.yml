@@ -41,11 +41,9 @@ markdown: kramdown
 #theme: minima
 gems:
   - jekyll-feed
-  - jekyll-redirect-from
   - jemoji
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-avatar
   - jekyll-mentions
 
 exclude:
