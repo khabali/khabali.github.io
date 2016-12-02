@@ -49,3 +49,4 @@ gems:
 exclude:
   - README.md
   - .gitignore
+  - vendor
