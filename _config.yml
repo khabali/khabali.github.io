@@ -49,4 +49,5 @@ gems:
 exclude:
   - README.md
   - .gitignore
+  - .travis.yml
   - vendor
