@@ -26,9 +26,11 @@ Le framework est très bien documenté, vous allez trouver tous ce qu'il vous fa
 
 Une fois votre première page est perte, vous pouvez l’héberger sur n’importe quel serveur web. Vous pouvez même utiliser [githube page](https://pages.github.com/) pour publier votre blog ou site gratuitement.
 
-Voila :wink:
 
-## Liens utils à propos de Jekyll:
+
+### Liens utils à propos de Jekyll:
 [Github repository du projet Jekyll](https://github.com/jekyll/jekyll)\\
-[Site web officiel](https://jekyllrb.com/)\\
+[Site web officiel de jekyll](https://jekyllrb.com/)\\
 [Liste de site (avec source) utilisant Jekyll](https://github.com/jekyll/jekyll/wiki/sites)
+
+Voila :wink:
