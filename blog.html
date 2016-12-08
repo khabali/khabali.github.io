@@ -6,17 +6,14 @@ permalink: /blog/
 
 <div class="jumbtron">
   <h1 class="">Bienvenu sur mon blog</h1>
-  <p class="text-muted">
-    Je blog sur ma veille téchnologique, des découvertes et des projets personnels...
-    S'inscrire <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a>
-  </p>
+  <p class="text-muted">Je blog sur ma veille téchnologique, des découvertes et des projets personnels...</p>
   <hr/>
 </div>
 
 {% for post in site.posts %}
   <div class="blog-post">
     <h2 class="blog-post-title">{{ post.title }}</h2>
-    <p class="blog-post-meta">{{ post.date | date: "%b %-d, %Y" }} by <a href="#">{{ post.author }}</a></p>
+    <p class="blog-post-meta">{{ post.date | date: "%b %-d, %Y" }} Par <a href="#">{{ post.author }}</a></p>
     <p>
       {{ post.excerpt }}
     </p>

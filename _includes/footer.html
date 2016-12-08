@@ -1,18 +1,19 @@
-<hr/>
-<footer>
-    <div class="col-md-6">
-      <p>
-        Le contenu de ce site &copy;&nbsp;{{ site.time | date: '%Y' }} est open source<br/>
-         et sous la licence  <a href="{{ site.github_repo }}/blob/master/LICENSE">MIT</a>.
-       </p>
-    </div>
-    <div class="col-md-6">
-      <p class="pull-right">
-        Proudly hosted by
-        <a href="{{ site.github_repo }}" target="_blank">
-          Github
-        </a>
-      </p>
+<footer class="footer">
+    <div class="col-lg-12">
+		<ul class="list-unstyled">
+		  <li class="pull-right"><a href="#top">Back to top</a></li>
+		  <li class="pull-right">|</li>
+		  <li class="pull-right">Proudly hosted by <a href="{{ site.github_repo }}" target="_blank">Github </a></li>
+		  <li><a href="/blog/">Blog</a></li>
+		  <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
+		  <li><a href="#">Projets</a></li>
+		  <li></li>
+		  <li><a href="https://fr.linkedin.com/in/{{site.linkedin_username}}" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+		  <li><a href="https://github.com/{{site.github_username}}" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
+		  <li><a href="https://twitter.com/{{site.twitter_username}}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+		</ul>
+		<p>Crée par <a href="khabali.github.io" rel="nofollow">Anas KHABALI</a>. Vous pouvez me contacter sur <a href="mailto:anas.khabali@gmail.com">anas.khabali@gmail.com</a>.</p>
+		<p>Le contenu de ce site &copy;&nbsp;{{ site.time | date: '%Y' }} est open source et sous <a href="{{ site.github_repo }}/blob/master/LICENSE">la licence MIT</a>.</p>
     </div>
 </footer>
 

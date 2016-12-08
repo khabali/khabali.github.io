@@ -19,7 +19,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Je suis un artisan du logiciel,
   fasciné par les langages de programmation, les systèmes d'information et l'intégration des données.
   Et sur ce site, je vais documenter les sujets que j'apprends, faire des résumés de ma veille technologique,
-  vous présenter mes projets personnels et d'autres choses divers et variées.
+  vous présenter mes projets personnels et d'autres choses diverses et variées.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://khabali.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: anas_khabali

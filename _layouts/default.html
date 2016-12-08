@@ -5,13 +5,12 @@ layout: compress
 
 <body>
 
-  {% include header.html %}
   <div class="container">
-    {{ content }}
-    {% include footer.html %}
+	{% include header.html %}
+	{{ content }}
   </div>
-
-  {% include anchor_links.html %}
+  {% include footer.html %}
+  
   {% include analytics.html %}
 
 </body>
