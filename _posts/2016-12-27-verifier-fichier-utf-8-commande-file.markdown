@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Vérifier si un fichier est en UTF-8 - cmd file"
+title:  "Vérifier si un fichier est en UTF-8 (commande file)"
 date:   2016-12-27 16:22:00 +0000
 author: Anas KHABALI
 categories: encoding linux
