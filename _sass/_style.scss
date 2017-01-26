@@ -3,6 +3,11 @@ html {
   min-height: 100%;
 }
 
+body {
+    --padding-top: 5px;
+	margin-bottom: 100px;
+}
+
 #left-sidebar{
   border-right: #c2c2c2 1px solid;
   max-width: 192px;
@@ -10,10 +15,19 @@ html {
   margin: 0 20px 0 auto;
 }
 
-body {
-    --padding-top: 5px;
-	margin-bottom: 50px;
-	font-family: 'Ubuntu',sans-serif;
+div#user_meta {
+    max-width: 192px;
+    text-align: right;
+    margin: 0 20px 0 auto;
+}
+
+div.social {
+    margin-top: 15px;
+}
+
+div.social a {
+    display: block;
+    height: 30px;
 }
 
 body>.navbar {
@@ -27,6 +41,10 @@ body>.navbar {
     body>.navbar-transparent .navbar-nav>.open>a {
         background-color: transparent!important
     }
+}
+
+h2{
+    margin: 15px 0 5px 0;
 }
 
 footer {
