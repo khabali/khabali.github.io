@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Blog
-permalink: /blog
+permalink: /blog/
 ---
 
 <div class="jumbtron">
@@ -16,7 +16,7 @@ permalink: /blog
     <p class="blog-post-meta">{{ post.date | date: "%b %-d, %Y" }} Par <a href="/">{{ post.author }}</a></p>
     <p>
       {{ post.excerpt }}
-	  {% if post.excerpt != post.content %}
+	    {% if post.excerpt != post.content %}
         <a href="{{ site.baseurl }}{{ post.url }}"> Lire plus</a>
       {% endif %}
     </p>
