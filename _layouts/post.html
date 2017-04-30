@@ -1,6 +1,5 @@
 ---
 layout: blog
-comments: true
 ---
 <div class="blog-post">
   <h2 class="blog-post-title">{{ page.title }}</h2>
@@ -11,17 +10,11 @@ comments: true
   </p>
   
   {% if page.comments %}
-	  <p>
 		<div id="disqus_thread"></div>
-		<script>
-
-		/**
-		*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-		*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-		
+		<script>	
 		var disqus_config = function () {
-		this.page.url = "{{ site.baseurl }}{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
-		this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+		this.page.url = "{{ site.url }}{{ page.url }}";
+		this.page.identifier = "{{ page.id }}";
 		};
 		
 		(function() { // DON'T EDIT BELOW THIS LINE
@@ -32,6 +25,5 @@ comments: true
 		})();
 		</script>
 		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	  </p>
   {% endif %}
 </div>
