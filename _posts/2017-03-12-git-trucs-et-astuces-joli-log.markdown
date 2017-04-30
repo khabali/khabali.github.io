@@ -4,6 +4,7 @@ title:  "Git trucs et astuces - Des jolis logs"
 date:   2017-04-29 16:33:00 +0200
 author: Anas KHABALI
 categories: git log, git trucs et astuces
+comments: true
 ---
 >Vous trouverez içi quelques trucs et astuces pour git.\\
 j'essaierais, dans une série de postes, de fournir une liste de commandes utiles pour le développeur dans certain sénario classique.
