@@ -4,6 +4,7 @@ title:  "Git trucs et astuces - effectuer un rebase"
 date:   2017-03-12 13:00:00 +0100
 author: Anas KHABALI
 categories: git, git trucs et astuces
+comments: true
 ---
 >Vous trouverez içi quelques trucs et astuces pour git.\\
 j'essaierais, dans une série de postes, de fournir une liste de commandes utiles pour le développeur dans certain sénario classique.
