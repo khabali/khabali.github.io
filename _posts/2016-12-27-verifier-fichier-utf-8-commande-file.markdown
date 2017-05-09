@@ -3,7 +3,8 @@ layout: post
 title:  "Vérifier si un fichier est en UTF-8 (commande file)"
 date:   2016-12-27 16:22:00 +0100
 author: Anas KHABALI
-categories: encoding linux
+categories: linux
+tags: linux-file-encoding
 comments: true
 ---
 Dernierement, j'ai eu affaire à la commande `file` pour essayer de vérifier le type d'encoding d'un fichier.

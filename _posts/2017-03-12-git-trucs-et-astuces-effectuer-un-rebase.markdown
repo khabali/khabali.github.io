@@ -3,7 +3,8 @@ layout: post
 title:  "Git trucs et astuces - effectuer un rebase"
 date:   2017-03-12 13:00:00 +0100
 author: Anas KHABALI
-categories: git, git trucs et astuces
+categories: git
+tags: git-trucs-et-astuces
 comments: true
 ---
 >Vous trouverez içi quelques trucs et astuces pour git.\\
@@ -36,7 +37,7 @@ une fois la base du merge trouver *(le hash du commit retourné par la commande 
 Après avoir lancer la commande *git rebase -i ${HASH}* git ouvre la liste de commit de votre branche a rebaser dans votre éditeur de logiciel préféré
 
 >Pour définir votre éditeur préféré utilisé par git
-utiliser la commande `git config --global core.editor "chemin vers notepade++ par example"` 
+utiliser la commande `git config --global core.editor "chemin vers notepade++ par example"`
 
 ```
 pick 1fc6c95 correction bug 2215

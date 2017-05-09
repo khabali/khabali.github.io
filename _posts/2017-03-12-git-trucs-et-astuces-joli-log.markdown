@@ -3,16 +3,14 @@ layout: post
 title:  "Git trucs et astuces - Des jolis logs"
 date:   2017-04-29 16:33:00 +0200
 author: Anas KHABALI
-categories: git log, git trucs et astuces
+categories: git
+tags: git-trucs-et-astuces
 comments: true
 ---
->Vous trouverez içi quelques trucs et astuces pour git.\\
-j'essaierais, dans une série de postes, de fournir une liste de commandes utiles pour le développeur dans certain sénario classique.
-
 __Voici un aperçu du git log classique__\\
 Ce format classique prend énormément de place dans une console pour afficher quelques informations.
 Et en plus, si les commentaires des commits sont bien détaillés et bien verbeux. Les logs peuvent devenir inexploitable via cette commande.
-Souvent, nous aimerions accéder uniquement à la première ligne des commits dans un log puis aller voir le détail après.
+Souvent, nous aimerions accéder uniquement à la première ligne des commits dans un log puis aller voir le détail après.\\
 ![alt text][git_log_capture]
 
 __Et voila un aperçu de notre joli git log__\\

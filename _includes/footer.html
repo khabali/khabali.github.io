@@ -1,11 +1,27 @@
 <footer class="footer">
-    <div class="col-lg-12">
-		<ul class="list-unstyled">
-		  <li class="pull-right"><a href="#top">Back to top</a></li>
-		  <li class="pull-right">|</li>
-		  <li class="pull-right">Proudly hosted by <a href="{{ site.github_repo }}" target="_blank">Github </a></li>
-		</ul>
-		<p>Crée par <b>Anas KHABALI</b>.</p>
-		<p>Le contenu de ce site &copy;&nbsp;2016 -{{ site.time | date: '%Y' }} est open source et sous <a href="{{ site.github_repo }}/blob/master/LICENSE">la licence MIT</a>.</p>
-    </div>
-</footer>
+  <div class="col-lg-8">
+    <p>Crée par <b>Anas KHABALI</b>.</p>
+    <p>Le contenu de ce site &copy;&nbsp;2016 -{{ site.time | date: '%Y' }} est open source et sous <a href="{{ site.github_repo }}/blob/master/LICENSE">la licence MIT</a>.</p>
+    <p>
+      <h6>Posts tags</h6>
+      {% assign tags = site.tags | sort %}
+      {% for tag in tags %}
+       <span class="site-tag">
+         <!-- /tag/{{ tag | first | slugify }}/ -->
+          <a href="#"
+              style="font-size: {{ tag | last | size  |  times: 4 | plus: 80  }}%">
+                  {{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }})
+          </a>
+      </span>
+      {% endfor %}
+    </p>
+  </div>
+  <div class="col-lg-4">
+    <ul class="list-unstyled">
+      <li class="pull-right"><a href="#top">Back to top</a></li>
+      <li class="pull-right">|</li>
+      <li class="pull-right">Proudly hosted by <a href="{{ site.github_repo }}" target="_blank">Github </a></li>
+    </ul>
+  </div>
+
+  </footer>
