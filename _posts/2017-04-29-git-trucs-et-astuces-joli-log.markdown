@@ -11,12 +11,12 @@ __Voici un aperçu du git log classique__\\
 Ce format classique prend énormément de place dans une console pour afficher quelques informations.
 Et en plus, si les commentaires des commits sont bien détaillés et bien verbeux. Les logs peuvent devenir inexploitable via cette commande.
 Souvent, nous aimerions accéder uniquement à la première ligne des commits dans un log puis aller voir le détail après.\\
-![alt text][git_log_capture]
+![alt text][git_log_capture]{:class="img-responsive"}
 
 __Et voila un aperçu de notre joli git log__\\
 Ici, nous avons uniquement la première ligne de chaque commit avec le nom de l'auteur et la date en plus de la version courte du hash du commit.
 Ce format rend les logs plus lisible et plus exploitable en affichant plus de commit et moins de bla bla des messages des commit.
-![alt text][git_joli_log_capture]
+![alt text][git_joli_log_capture]{:class="img-responsive"}
 
 __Alors, comment obtenir ce joli aperçu des git log ?__\\
 C'est très simple, il suffit de lancer cette petite commande.\\
