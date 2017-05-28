@@ -10,7 +10,10 @@ layout: compress
   {% feed_meta %}
   <link async rel="stylesheet" href="/css/main.css">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+  
   {% seo %}
   <!--[if lt IE 9]>
   <script src="/js/html5shiv.min.js"></script>
@@ -20,16 +23,35 @@ layout: compress
 
 <body>
 	  {% include header.html %}	
-	  <div class="container">
-		<div class="row">
-			<div id="left-sidebar" class="col-md-4">
-				{% include left-sidebare.html %}
+	  
+		<header class="header-section ">
+		  <div class="intro-header no-img">
+			<div class="container">
+			  <div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				  <div class="page-heading">
+					<h1>Anas Khabali</h1>
+					
+					  <hr class="small">
+					  <span class="page-subheading">
+						  Programmer. Software craftmanship. Architect.
+					  </span>
+					
+				  </div>
+				</div>
+			  </div>
 			</div>
-			<div class="col-md-8">
-				{{ content }}
+		  </div>
+		</header>
+
+
+		<div role="main" class="container">
+		  <div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+					{{ content }}
 			</div>
+		  </div>
 		</div>
-	  </div>
 	  {% include footer.html %}
 	  {% include analytics.html %}
 
