@@ -3,7 +3,7 @@ layout: post
 title:  "Créer votre site avec jekyll"
 date:   2016-12-01 02:24:00 +0100
 author: Anas KHABALI
-categories: jekyll bloging
+tags: jekyll
 comments: true
 ---
 Le blog que vous êtes en train de lire en ce moment est crée par Jekyll et hébergé sur Github.

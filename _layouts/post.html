@@ -1,29 +1,56 @@
 ---
 layout: blog
 ---
-<div class="blog-post">
-  <h2 class="blog-post-title">{{ page.title }}</h2>
-  <p class="blog-post-meta">{{ page.date | date: "%b %-d, %Y" }} by <a href="#">{{ page.author }}</a></p>
-  <hr/>
-  <p>
-    {{ content }}
-  </p>
-  
-  {% if page.comments %}
-		<div id="disqus_thread"></div>
-		<script>	
-		var disqus_config = function () {
-		this.page.url = "{{ site.url }}{{ page.url }}";
-		this.page.identifier = "{{ page.id }}";
-		};
+
+	<header class="header-section">
+		<div class="intro-header no-img">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				<div class="post-heading">
+					<h1>{{ page.title }}</h1> 
+					<p class="post-meta">
+						Posté le {{ page.date | date: "%-d %b, %Y" }}&nbsp;&bull;&nbsp; 
+						{% for tag in page.tags %}
+							<!-- /tags/{{ tag }}/ -->
+							<a href="#">
+								<span class="label label-default">{{ tag }}</span>
+							</a>&nbsp;
+						{% endfor %}	
+					</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				<article role="main" class="blog-post">  
+					{{ content }}
+				</article>
+			</div>
+		</div>
 		
-		(function() {
-		var d = document, s = d.createElement('script');
-		s.src = 'https://khabali-blog.disqus.com/embed.js';
-		s.setAttribute('data-timestamp', +new Date());
-		(d.head || d.body).appendChild(s);
-		})();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  {% endif %}
-</div>
+		<div class="disqus-comments">
+			  {% if page.comments %}
+					<div id="disqus_thread"></div>
+					<script>	
+					var disqus_config = function () {
+					this.page.url = "{{ site.url }}{{ page.url }}";
+					this.page.identifier = "{{ page.id }}";
+					};
+					
+					(function() {
+					var d = document, s = d.createElement('script');
+					s.src = 'https://khabali-blog.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+					})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			  {% endif %}
+		</div>
+	</div>

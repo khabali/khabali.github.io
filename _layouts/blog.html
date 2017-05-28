@@ -1,11 +1,46 @@
 ---
-layout: default
+layout: blog
 ---
-<div class="row">
-  <div class="col-md-8 blog-main">
-    {{ content }}
-  </div>
-  <div class="col-md-4 blog-sidebar">
-        {% include sidebar.html %}
-  </div>
-</div>
+<!DOCTYPE HTML>
+<html lang="fr-FR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="generator" content="Jekyll v{{ jekyll.version }}">
+  {% feed_meta %}
+  <link async rel="stylesheet" href="/css/main.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
+  
+  {% seo %}
+  <!--[if lt IE 9]>
+  <script src="/js/html5shiv.min.js"></script>
+  <script src="/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+	  {% include header.html %}	
+	  
+
+
+		<div role="main" class="container">
+		  <div class="row">
+			<div role="main" class="container main-content">
+					{{ content }}
+			</div>
+		  </div>
+		</div>
+	  {% include footer.html %}
+	  {% include analytics.html %}
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script async  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script async src="/js/bootstrap.min.js"></script>
+	<!-- Go to www.addthis.com/dashboard to customize your tools
+	<script async type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5840c23d2fb52eda"></script>
+	-->
+</body>
+</html>
