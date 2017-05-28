@@ -3,8 +3,7 @@ layout: post
 title:  "Git trucs et astuces - Des jolis logs"
 date:   2017-04-29 16:33:00 +0200
 author: Anas KHABALI
-categories: git
-tags: git-trucs-et-astuces
+tags: git trucs-et-astuces
 comments: true
 ---
 __Voici un aperçu du git log classique__\\
