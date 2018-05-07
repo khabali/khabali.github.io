@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Comment convertir un InputStream en String en Java 8"
-date:   2018-05-07 10:24:00 +0100
+date:   2018-05-07 10:24:00 +0200
 author: Anas KHABALI
 tags: java java-8
 comments: false
