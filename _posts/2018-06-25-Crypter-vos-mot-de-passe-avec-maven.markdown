@@ -3,7 +3,7 @@ layout: post
 title:  "Crypter vos mots de passe avec Maven"
 date:   2018-06-25 15:00:00 +0200
 author: Anas KHABALI
-tags: maven
+tags: maven crypto
 comments: false
 ---
 J'ai vu beaucoup de développeurs mettre leurs mots de passe en claire dans le fichier maven settings.
@@ -29,7 +29,7 @@ Maintenant, utiliser la commande suivante pour crypter les mots de passe des ser
 mvn --encrypt-password <password>
 ```
 
-Dans la section *servers* du fichiers _Setting.xml_ vous pouvez ajouter votre mot de passe crypté
+Dans la section **servers** du fichiers _Setting.xml_ vous pouvez ajouter votre mot de passe crypté
 
 ```
 <server>
