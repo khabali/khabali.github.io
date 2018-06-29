@@ -25,6 +25,8 @@ git reset HEAD path/vers/fichiers_non_desires
 et refaire votre commit avec les bon fichiers restant dans staging.
 
 ## Note
+Pour refaire votre commit vous pouvez même réutiliser le même commit avec la commande `git commit -c ORIG_HEAD  `
+
 Si vous avez déjà effectuer un push dans une branche distante, il vous faudra refaire un `git push -f` pour mettre à jour votre branche distante.
 
 Voila :wink:
