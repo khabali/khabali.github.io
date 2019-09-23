@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Run same integration test on multiple databases environments"
+title:  "Integration test with multiple databases"
 date:   2019-09-20 10:56:00 +0200
 author: Anas KHABALI
 tags: testcontainers junit5 integration-test jdbc docker
@@ -8,14 +8,20 @@ comments: true
 ---
 ![alt text][idea-capture]{:class="img-responsive"}
 
-Recently at Talend, i have worked on a generic JDBC component able of executing sql queries to read/load data from/to any database supporting JDBC specification
-and providing a driver for it.
+Recently at Talend, i have worked on a [generic JDBC component](https://github.com/Talend/connectors-se/tree/master/jdbc) able of executing SQL queries to read/load data from/to any database supporting JDBC specification and providing a driver for it.
+
+The component is able of :
+
+- Automatically creating database table with correct schema from the source data
+- Reading data using a table name or a SQL query
+- Inserting/Updating/Deleting and Upserting data to a table
+- Bulk loading data to some datawarehouse like Snowflake and AWS Redshift
 
 As a part of this development, I needed to ensure that the component can run correctly with multiples databases.
 So, what I needed was to have multiples databases environments and integration tests that can be parameterized and executed on all the environments.
 
 After some research, I have ended up combining **testcontainers** as a database environments provider and **TestTemplate** from **JUnit5**
-to handle multiple execution context for the same test and i was satisfied with the end result.
+to handle multiple execution contexts for the same test and I was satisfied with the end result.
 
 This is what i will be sharing here, but first let's see briefly What are
 
@@ -28,10 +34,9 @@ Selenium web browsers, or anything else that can run in a Docker container.
 
 >A **TestTemplate** method is not a regular test case but rather a template for test cases. As such, it is designed to be invoked multiple times depending on the number of invocation contexts returned by the registered providers. Thus, it must be used in conjunction with a registered TestTemplateInvocationContextProvider extension. Each invocation of a test template method behaves like the execution of a regular **Test** method with full support for the same lifecycle callbacks and extensions. Please refer to Providing Invocation Contexts for Test Templates for usage examples.
 
-## Setup the maven project dependencies
+## Setup project with Maven
 
-Create a standard maven project and add the required dependencies into the `pom.xml` file of the project.
-add the JUnit 5 dependency and the dependency for testcontainers.
+Create a standard maven project and add the required test dependencies into the `pom.xml` file of the project.
 
 ````
 <properties>
@@ -55,12 +60,11 @@ add the JUnit 5 dependency and the dependency for testcontainers.
     </dependency>
 </dependencies>
 ````
-For every database we will need to add the container dependency with it required JDBC driver.
-Here are the dependencies for MySQL, Postgres MariaDB and MSSQL that we will be using here.
+- JUnit 5 (jupiter) dependency
+- testcontainers library dependency.
 
-
->You can check [the available database containers](https://www.testcontainers.org/modules/databases/) provided by testcontainers
-or check how to create a [custom one](https://www.testcontainers.org/features/creating_container/).
+Then, for every database, the database container dependency with it required JDBC driver need to be added.
+Here are the dependencies for MySQL, Postgres MariaDB and MSSQL that I will be using here for demo purpose.
 
 ````
 <dependencies>
@@ -118,17 +122,21 @@ or check how to create a [custom one](https://www.testcontainers.org/features/cr
 </dependencies>
 ````
 
+>You can check [the available database containers](https://www.testcontainers.org/modules/databases/) provided by testcontainers
+or check how to create a [custom one](https://www.testcontainers.org/features/creating_container/).
+
+
 The project dependencies are setup. Let's write some Java code.
 
 ## Test Template Invocation Context Provider
 
-To work with test template in JUnit 5. we will need to implement  *TestTemplateInvocationContextProvider* interface which will provides the invocation context
-to tests.
+To work with test template in JUnit 5, an implementation of  *TestTemplateInvocationContextProvider* interface which will provides the invocation context
+to tests is needed.
 
-In the test sources folder we create *DatabaseInvocationContextProvider* class that implement the *TestTemplateInvocationContextProvider*
+In the test sources folder, create *DatabaseInvocationContextProvider* class that implement the *TestTemplateInvocationContextProvider*
 and handle the database containers downloads, start and stop.
 
-Let's walk through the code to see how we can handle that.
+Let's walk through the code to see how this can be handled.
 
 ````
 package io.github.khabali;
@@ -212,21 +220,21 @@ class DatabaseInvocationContextProvider implements TestTemplateInvocationContext
 }
 ````
 
-I create a containers map indexed by the database name what I want to run tests on.
+Containers are indexed by there database name in a map to make it simple to work with.
 
 >**Note** that every time a database container is instantiated. It will download the specified docker image for the targeted database from [Docker Hub](https://hub.docker.com/) if it's not already present locally. **This is done once**, Then, the image will be available locally for next execution like any other docker image on your machine.
 
-Then I will need to implements two methods of *TestTemplateInvocationContextProvider* interface.
+*TestTemplateInvocationContextProvider* interface comes with two methods:
 
 - *supportsTestTemplate()* : determine if this provider supports providing invocation contexts for the test template method represented by the supplied context. We just return true here as we assume that any test extended with this extension can use it.
 - *provideTestTemplateInvocationContexts()* : provide invocation contexts for the test template method represented by the supplied context.
 This method is only called by the framework if supportsTestTemplate previously returned true for the same ExtensionContext. Thus, this method must not return an empty Stream. Here we will create *TestTemplateInvocationContext* instance for every databases.
 
-In *TestTemplateInvocationContext* we add 3 extensions :
+In *TestTemplateInvocationContext* 3 extensions are added :
 
-- *BeforeEachCallback* where we will start the container
-- *AfterAllCallback* where we will stop the container after the test execution
-- *ParameterResolver* where we will provide the container instance as a parameter that can be used as a test parameter.
+- *BeforeEachCallback* where container will be started
+- *AfterAllCallback* where container will be stopped after test execution
+- *ParameterResolver* where container instance is provided as a parameter to the test method.
 
 
 Let's write a simple test template and use this extension.
@@ -267,7 +275,7 @@ From here, I can passe those information to my component to test the program log
 >For **MSSQL** a usage license needs to be added to the project for that you will need to add a *container-license-acceptance.txt* file to
 the test resources folder with this line `mcr.microsoft.com/mssql/server:2017-CU12`
 
-Run this test to check that the *myAwesomeTest* is executed 4 times with the adequate parameter.
+Run this test to check that the *myAwesomeTest* is executed 4 times and each time with the adequate parameter.
 
 This was very useful to test and ensure that my component works as expected on different databases without writing specific tests for every databases.
 
