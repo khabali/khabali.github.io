@@ -6,7 +6,8 @@ author: Anas KHABALI
 tags: datastructure hashmap java
 comments: true
 ---
-# Comment concevoir une HashMap sans utiliser aucune librarie ? 
+**Comment concevoir une HashMap sans utiliser aucune librarie ?** 
+
 Le but, est de comprendre comment fonctionne cette structure de données. 
 
 Une HashMap est une structure de données permettant le stockage de pairs (clé, valeur) et surtout d'accéder plus tard à une valeur en ayant sa clé associée de façon efficace.
@@ -71,7 +72,7 @@ Maintenant qu'on a trouvé la liste devant contenir la valeur, on devra simpleme
 ![alt text][hashmap]{:class="img-responsive"}
 
 
-### Java Code
+#### Java Code
 Voici, une implémentation de ce qui a été décrit ci-dessus. Une lecture du code et de ses commentaires embarqué facilitera encore plus la compréhension.
 
 <script src="https://gist.github.com/khabali/ed8d1b7fbbd1b5512d17cde7cb160e49.js"></script>
