@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Concevoir un HashMap en Java"
-date:   2019-09-20 10:10:00 +0200
+date:   2019-12-31 10:10:00 +0200
 author: Anas KHABALI
 tags: datastructure hashmap java
 comments: true
@@ -74,8 +74,8 @@ Maintenant qu'on a trouvé la liste devant contenir la valeur, on devra simpleme
 
 
 ### Java Code
-<script src="https://gist.github.com/khabali/ed8d1b7fbbd1b5512d17cde7cb160e49.js"></script>
 
+<script src="https://gist.github.com/khabali/ed8d1b7fbbd1b5512d17cde7cb160e49.js"></script>
 
 
 
