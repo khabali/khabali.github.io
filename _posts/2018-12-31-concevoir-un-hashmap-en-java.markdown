@@ -16,7 +16,7 @@ Pour rester simple, voici les 3 principales fonctionnalités d'une HashMap :
 - `get(cle)` : retourner la valeur associée à cette clé ou _null_ si la clé n'existe pas dans la HashMap.
 - `remove(cle)` : supprimer la clé et sa valeur de la HashMap si la clé existe.
 
-## Example
+## Exemple
 
 ````
 MyHashMap hashMap = new MyHashMap();
