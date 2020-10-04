@@ -39,12 +39,13 @@ sass:
 # Build settings
 markdown: kramdown
 #theme: minima
-gems:
+plugins:
   - jekyll-feed
   - jemoji
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-mentions
+  - jekyll-gist
 
 exclude:
   - README.md

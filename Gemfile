@@ -24,9 +24,10 @@ ruby RUBY_VERSION
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.6"
-   gem 'jemoji', '~>0.7.0'
-   gem 'jekyll-mentions', '~>1.2.0'
-   gem 'jekyll-sitemap', '~>0.12.0'
-   gem 'jekyll-seo-tag', '~>2.1.0'
+   gem "jekyll-feed"
+   gem 'jemoji'
+   gem 'jekyll-mentions'
+   gem 'jekyll-sitemap'
+   gem 'jekyll-seo-tag'
+   gem 'jekyll-gist'
 end

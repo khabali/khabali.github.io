@@ -4,7 +4,7 @@ title:  "Roulette Russe pour les Devs/Ops et les sysadmin"
 date:   2017-05-10 19:15:00 +0200
 author: Anas KHABALI
 tags: linux devops
-comments: true
+comments: false
 ---
 La roulette russe, ce jeu très répandu dans le monde entier, mais qui ne fait rire personne. Pour ceux qui ne connaissaient pas l'existence de ce "jeu", le but est simple. Les acteurs du jeu chargent le revolver d'une seule balle, puis le pointe sur leur front et tire tour à tour.
 Si le joueur est chanceux, la balle n'est pas partie dans le cas inverse, on peut :boom:

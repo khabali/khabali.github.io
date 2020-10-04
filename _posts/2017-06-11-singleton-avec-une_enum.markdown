@@ -4,7 +4,7 @@ title:  "Design pattern - Singleton implémenté avec une Enum"
 date:   2017-06-11 17:45:00 +0200
 author: Anas KHABALI
 tags: Design-pattern Singleton
-comments: true
+comments: false
 ---
 
 Voici la plus simple et efficace implémentation d'un Singleton comme décrite par [Joshua Bloch](https://en.wikipedia.org/wiki/Joshua_Bloch "wiki page of Joshua Bloch") en utilisant une enum au lieu d'une classe avec un constructeur privé et une méthode statique pour crée l'instance.

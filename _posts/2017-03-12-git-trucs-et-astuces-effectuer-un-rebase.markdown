@@ -4,7 +4,7 @@ title:  "Git trucs et astuces - effectuer un rebase"
 date:   2017-03-12 13:00:00 +0100
 author: Anas KHABALI 
 tags: git trucs-et-astuces
-comments: true
+comments: false
 ---
 __C'est quoi un rebase de branche ?__\\
 Un rebase consiste à synchroniser l'arbre des commits d'une branche avec l'arbre d'une autre branche, souvent la branche principale *master*.\\

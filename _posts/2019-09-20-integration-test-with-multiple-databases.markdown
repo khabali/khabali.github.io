@@ -4,7 +4,7 @@ title:  "Integration test with multiple databases"
 date:   2019-09-20 10:56:00 +0200
 author: Anas KHABALI
 tags: testcontainers junit5 integration-test jdbc docker
-comments: true
+comments: false
 ---
 ![alt text][idea-capture]{:class="img-responsive"}
 

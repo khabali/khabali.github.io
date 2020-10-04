@@ -4,7 +4,7 @@ title:  "Supprimer des fichiers d'un commit git déjà effectué"
 date:   2018-06-29 17:07:00 +0200
 author: Anas KHABALI
 tags: git
-comments: true
+comments: false
 ---
 ça m'arrive d'effectuer un commit contenant des fichiers non désirés par erreur.
 Dans git c'est facile de réparer ce genre d'erreur.

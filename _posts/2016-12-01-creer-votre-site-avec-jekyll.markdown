@@ -4,7 +4,7 @@ title:  "Créer votre site avec jekyll"
 date:   2016-12-01 02:24:00 +0100
 author: Anas KHABALI
 tags: jekyll
-comments: true
+comments: false
 ---
 Le blog que vous êtes en train de lire en ce moment est crée par Jekyll et hébergé sur Github.
 
@@ -26,8 +26,6 @@ Jekyll est vraiment très facile à installer et à comprendre. Vous allez l'ado
 Le framework est très bien documenté, vous allez trouver tous ce qu'il vous faut sur [le site officiel de Jekyll](https://jekyllrb.com/)
 
 Une fois votre première page est perte, vous pouvez l’héberger sur n’importe quel serveur web. Vous pouvez même utiliser [githube page](https://pages.github.com/) pour publier votre blog ou site gratuitement.
-
-
 
 ### Liens utils à propos de Jekyll:
 [Github repository du projet Jekyll](https://github.com/jekyll/jekyll)\\

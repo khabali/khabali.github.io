@@ -4,7 +4,7 @@ title:  "Git trucs et astuces - Des jolis logs"
 date:   2017-04-29 16:33:00 +0200
 author: Anas KHABALI
 tags: git trucs-et-astuces
-comments: true
+comments: false
 ---
 __Voici un aperçu du git log classique__\\
 Ce format classique prend énormément de place dans une console pour afficher quelques informations.
