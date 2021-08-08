@@ -8,6 +8,6 @@ comments: false
 ---
 ![alt text][idea-capture]{:class="img-responsive"}
 
-Moved to DZone https://dzone.com/articles/integration-test-with-multiple-databases-1
+Moved to DZone [https://dzone.com/articles/integration-test-with-multiple-databases-1](https://dzone.com/articles/integration-test-with-multiple-databases-1)
 
 [idea-capture]: {{site.baseurl}}/assets/images/2019/10/20/idea_testcontainer_testtemplate_junit5_zoomed.png "Test execution result"   
