@@ -548,3 +548,41 @@ table tr th :last-child,
 table tr td :last-child {
   margin-bottom: 0;
 }
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-link {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #404040 !important;
+  background-color: white;
+  border: 1px solid #404040;
+  border-radius: 4px;
+}
+
+.pagination-link:hover {
+  background-color: #0085a1;
+  color: white !important;
+}
+
+.pagination-link.current {
+  font-weight: bold;
+  background-color: #404040;
+  color: white !important;
+}
+
+.pagination-link.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

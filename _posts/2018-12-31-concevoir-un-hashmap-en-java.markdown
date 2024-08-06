@@ -1,9 +1,12 @@
 ---
 layout: post
 title:  "Concevoir une HashMap en Java"
+subtitle: "Comment concevoir une HashMap sans utiliser aucune librarie ?"
+image: /assets/images/2019/12/31/hashmap_fr.png
 date:   2019-12-31 15:00:00 +0200
 author: Anas KHABALI
 tags: datastructure hashmap java
+reading_time: 15
 comments: false
 ---
 **Comment concevoir une HashMap sans utiliser aucune librarie ?** 
@@ -78,9 +81,3 @@ Voici, une implémentation de ce qui a été décrit ci-dessus. Une lecture du c
 {% gist ed8d1b7fbbd1b5512d17cde7cb160e49 %}
 
 [hashmap]: {{site.baseurl}}/assets/images/2019/12/31/hashmap_fr.png "HashMap fonctionnement interne" 
-
-
-
-
-
-

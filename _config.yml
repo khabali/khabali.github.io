@@ -13,10 +13,14 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
+lang: fr-FR
 title: Anas KHABALI
+tagline: Tech Blog
 email: anas.khabali@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Solutions Architect
+  Software engineer with experience in cloud, data integration, IoT, and embedded systems. 
+  Exploring DevOps practices and software architecture. Sharing learnings and insights 
+  on development techniques, system design, and tech best practices.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://khabali.github.io" # the base hostname & protocol for your site,
 permalink: /:title.html
@@ -46,9 +50,20 @@ plugins:
   - jekyll-seo-tag
   - jekyll-mentions
   - jekyll-gist
+  - jekyll-paginate
+  - jekyll-mermaid
 
 exclude:
   - README.md
   - .gitignore
   - .travis.yml
   - vendor
+
+
+
+# Add these lines to your existing _config.yml
+paginate: 5  # Number of posts per page
+paginate_path: "/page/:num/"  # URL structure for paginated pages
+
+mermaid:
+  src: 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js'

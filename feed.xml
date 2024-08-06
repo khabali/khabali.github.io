@@ -2,7 +2,10 @@
 layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" 
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>{{ site.title | xml_escape }}</title>
     <description>{{ site.description | xml_escape }}</description>
@@ -10,11 +13,19 @@ layout: null
     <atom:link href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <language>{{ site.lang | default: "en-US" }}</language>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:10 %}
+    <image>
+      <url>{{ site.logo | default: "/path/to/default-logo.png" | prepend: site.baseurl | prepend: site.url }}</url>
+      <title>{{ site.title | xml_escape }}</title>
+      <link>{{ site.url }}{{ site.baseurl }}/</link>
+    </image>
+    {% for post in site.posts limit:15 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
-        <description>{{ post.content | xml_escape }}</description>
+        <dc:creator>{{ post.author | default: site.author | xml_escape }}</dc:creator>
+        <description>{{ post.excerpt | strip_html | truncate: 200 | xml_escape }}</description>
+        <content:encoded><![CDATA[{{ post.content | strip }}]]></content:encoded>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
         <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
@@ -24,6 +35,9 @@ layout: null
         {% for cat in post.categories %}
         <category>{{ cat | xml_escape }}</category>
         {% endfor %}
+        {% if post.image %}
+        <enclosure url="{{ post.image | prepend: site.baseurl | prepend: site.url }}" length="{{ post.image_size }}" type="image/jpeg"/>
+        {% endif %}
       </item>
     {% endfor %}
   </channel>
